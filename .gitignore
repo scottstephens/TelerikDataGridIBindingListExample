@@ -4,3 +4,6 @@
 *.suo
 *.user
 
+# Telerik license file
+*.licx
+
