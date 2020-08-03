@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TelerikDataGridIBindingListExample
 {
-    public class BindingListWrapper<V> : IBindingList where V : new()
+    public class BindingListWrapper<V> : IDataSourceRequirements<V> where V : new()
     {
         private BindingList<V> Inner = new BindingList<V>();
         private IBindingList InnerExplicit => (IBindingList)this.Inner;
