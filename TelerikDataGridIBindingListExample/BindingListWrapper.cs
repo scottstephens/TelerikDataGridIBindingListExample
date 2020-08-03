@@ -27,6 +27,8 @@ namespace TelerikDataGridIBindingListExample
                 this.ListChanged?.Invoke(sender, e);
         }
 
+        public V this[int index] { get => this.Inner[index]; set => this.Inner[index] = value; }
+
         object IList.this[int index] { get => this.InnerExplicit[index]; set => this.InnerExplicit[index] = (V)value; }
 
         bool IBindingList.AllowNew => this.InnerExplicit.AllowNew;
